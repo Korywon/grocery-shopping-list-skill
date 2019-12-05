@@ -89,7 +89,7 @@ const AddToListIntentHandler = {
         if (item && item !== '') {
             const speakOutputArray = [
                 `Alright, I added ${item} to your list.`,
-                `Okay boomer, I added ${item} to the list.`,
+                `Okay, I added ${item} to the list.`,
                 `Sure, ${item} added to your list.`
             ];
             
@@ -120,7 +120,7 @@ const RemoveFromListIntentHandler = {
         if (item && item !== '') {
             const speakOutputArray = [
                 `Alright, I removed ${item} from your list.`,
-                `Okay boomer, I removed ${item} from the list.`,
+                `Okay, I removed ${item} from the list.`,
                 `Sure, ${item} removed to your list.`
             ];
             
