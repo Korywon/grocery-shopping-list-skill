@@ -1,0 +1,100 @@
+{
+  "interactionModel": {
+    "languageModel": {
+      "invocationName": "grocery shopping list skill",
+      "intents": [{
+          "name": "AMAZON.CancelIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": []
+        },
+        {
+          "name": "HelloWorldIntent",
+          "slots": [],
+          "samples": [
+            "how's it going",
+            "what's up",
+            "hey there",
+            "hey",
+            "hello",
+            "hi"
+          ]
+        },
+        {
+          "name": "AMAZON.NavigateHomeIntent",
+          "samples": []
+        },
+        {
+          "name": "AddToList",
+          "slots": [{
+            "name": "food",
+            "type": "AMAZON.Food"
+          }],
+          "samples": [
+            "add {food}",
+            "add {food} to my list",
+            "add {food} to list",
+            "add {food} to the list"
+          ]
+        },
+        {
+          "name": "RemoveFromList",
+          "slots": [{
+            "name": "food",
+            "type": "AMAZON.Food"
+          }],
+          "samples": [
+            "remove {food} from list",
+            "remove {food} from the list",
+            "remove {food}",
+            "remove {food} from my list"
+          ]
+        },
+        {
+          "name": "ClearList",
+          "slots": [],
+          "samples": [
+            "clear the list",
+            "list clear",
+            "clear list",
+            "clear my list"
+          ]
+        }
+      ],
+      "types": []
+    },
+    "dialog": {
+      "intents": [{
+        "name": "ClearList",
+        "confirmationRequired": true,
+        "prompts": {
+          "confirmation": "Confirm.Intent.1426926654772"
+        },
+        "slots": []
+      }],
+      "delegationStrategy": "ALWAYS"
+    },
+    "prompts": [{
+      "id": "Confirm.Intent.1426926654772",
+      "variations": [{
+          "type": "PlainText",
+          "value": "You have some items on your list. Are you sure you want to clear your list?"
+        },
+        {
+          "type": "PlainText",
+          "value": "All items from your list will be removed. Are you sure you want to do this?"
+        },
+        {
+          "type": "PlainText",
+          "value": "I will remove all items from your list. Are you sure you want to do this?"
+        }
+      ]
+    }]
+  }
+}
